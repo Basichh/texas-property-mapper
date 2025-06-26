@@ -10,7 +10,7 @@
 <body>
   <header>
     <div class="branding">
-      <h1>Texas Property Mapper</h1>
+      <h1>Texas Property Mapper🏠</h1>
       <p>Visualize properties and flood zones in Austin, TX</p>
     </div>
   </header>
@@ -20,15 +20,15 @@
 
     <aside id="sidebar">
       <div id="controls">
-        <h3>Search Address</h3>
+        <h3>Search Address 🔍</h3>
         <input type="text" id="addressInput" placeholder="Enter address..." />
         <button onclick="searchAddress()">Search</button>
       </div>
 
-      <div id="propertyFormToggle">Submit Property</div>
+      <div id="propertyFormToggle">Submit Property 📝</div>
 
       <div id="propertyForm" class="hidden">
-        <h3>Submit Property</h3>
+        <h3>Submit Property 🏡</h3>
         <input type="text" id="formAddress" placeholder="Address" />
         <select id="formType">
           <option value="residential">Residential</option>
@@ -40,8 +40,8 @@
 
       <div id="layerControls">
         <h3>Toggle Layers</h3>
-        <button onclick="toggleLayer('buildings-layer')">Toggle Buildings</button>
-        <button onclick="toggleLayer('floodzones-layer')">Toggle Flood Zones</button>
+        <button onclick="toggleLayer('buildings-layer')">Toggle Buildings 🏢</button>
+        <button onclick="toggleLayer('floodzones-layer')">Toggle Flood Zones 🌧️</button>
       </div>
     </aside>
   </main>
@@ -49,6 +49,9 @@
   <footer>
     <p>&copy; 2025 Texas Property Mapper. All rights reserved.</p>
   </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast hidden"></div>
 
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
   <script type="module" src="main.js"></script>

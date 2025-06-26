@@ -114,8 +114,19 @@ document.getElementById('propertyFormToggle').addEventListener('click', () => {
   document.getElementById('propertyForm').classList.toggle('hidden');
 });
 
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  toast.textContent = `✅ ${message}`; // Add a checkmark emoji
+  toast.classList.remove('hidden');
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+    toast.classList.add('hidden');
+  }, 3500);
+}
+
 // Submit Property
-function submitProperty() {
+export function submitProperty() {
   const address = document.getElementById('formAddress').value;
   const type = document.getElementById('formType').value;
   const notes = document.getElementById('formNotes').value;
@@ -148,7 +159,7 @@ function submitProperty() {
         // Update the source data
         map.getSource(submittedSourceId).setData(submittedProperties);
 
-        alert(`Property submitted at: ${address}`);
+        showToast('Property submitted successfully!');
         document.getElementById('propertyForm').classList.add('hidden');
       } else {
         alert('Address not found. Please try again.');
