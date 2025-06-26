@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Texas Property Mapper</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="branding">
+      <h1>Texas Property Mapper</h1>
+      <p>Visualize properties and flood zones in Austin, TX</p>
+    </div>
+  </header>
+
+  <main>
+    <div id="map"></div>
+
+    <aside id="sidebar">
+      <div id="controls">
+        <h3>Search Address</h3>
+        <input type="text" id="addressInput" placeholder="Enter address..." />
+        <button onclick="searchAddress()">Search</button>
+      </div>
+
+      <div id="propertyFormToggle">Submit Property</div>
+
+      <div id="propertyForm" class="hidden">
+        <h3>Submit Property</h3>
+        <input type="text" id="formAddress" placeholder="Address" />
+        <select id="formType">
+          <option value="residential">Residential</option>
+          <option value="commercial">Commercial</option>
+        </select>
+        <textarea id="formNotes" placeholder="Notes"></textarea>
+        <button onclick="submitProperty()">Submit</button>
+      </div>
+
+      <div id="layerControls">
+        <h3>Toggle Layers</h3>
+        <button onclick="toggleLayer('buildings-layer')">Toggle Buildings</button>
+        <button onclick="toggleLayer('floodzones-layer')">Toggle Flood Zones</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Texas Property Mapper. All rights reserved.</p>
+  </footer>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

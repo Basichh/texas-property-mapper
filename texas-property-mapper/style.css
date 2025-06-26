@@ -1,0 +1,179 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f6f8fa;
+  color: #222;
+}
+
+header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 1.5rem 0 1rem 0;
+  text-align: center;
+}
+
+.branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+main {
+  display: flex;
+  height: calc(100vh - 120px);
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+#map {
+  flex: 2 1 60%;
+  min-width: 350px;
+  height: 100%;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+#sidebar {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 1.5rem 1.25rem;
+  margin-bottom: 0.5rem;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+#propertyFormToggle {
+  cursor: pointer;
+  font-weight: 600;
+  color: #2d72d9;
+  background: #eaf1fb;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s;
+}
+
+#propertyFormToggle:hover {
+  background: #d2e3fa;
+}
+
+input[type="text"], select, textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  margin: 0.5rem 0 1rem 0;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9fafb;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus, select:focus, textarea:focus {
+  border: 1.5px solid #2d72d9;
+  outline: none;
+  background: #fff;
+}
+
+button {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #e0e6ed;
+  color: #222;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+button.primary, button[type="submit"] {
+  background: #2d72d9;
+  color: #fff;
+}
+
+button:hover {
+  background: #2d72d9;
+  color: #fff;
+}
+
+#layerControls {
+  position: absolute;
+  bottom: 10px; /* Move to the bottom */
+  left: 10px;   /* Keep it on the left */
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Ensure it appears above the map */
+}
+
+#layerControls button {
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  background: #fff;
+  color: #888;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.95rem;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.03);
+  margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  #map, #sidebar {
+    min-width: 0;
+    width: 100%;
+    height: 350px;
+  }
+  #sidebar {
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: auto;
+  }
+  .card {
+    min-width: 220px;
+    flex: 1 1 220px;
+  }
+}
