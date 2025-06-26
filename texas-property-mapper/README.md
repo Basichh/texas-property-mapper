@@ -12,7 +12,7 @@ A front-end prototype that visualizes public GIS data using Mapbox GL JS and all
 ## Setup Instructions
 
 1. Clone the repository or unzip the files.
-2. Replace `YOUR_MAPBOX_ACCESS_TOKEN` in `script.js` with your Mapbox public token.
+2. Replace `mapboxgl.accessToken` in `main.js` with your Mapbox public token.
 3. Open `index.html` in a browser.
 
 ## Technical Decisions
