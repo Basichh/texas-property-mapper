@@ -6,6 +6,10 @@ body, html {
   color: #222;
 }
 
+body main {
+  background: #f6f8fa;
+}
+
 header {
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -18,6 +22,11 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+}
+
+.branding h1 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: 1px;
 }
 
 .logo {
@@ -175,6 +184,57 @@ footer {
   opacity: 1;
   bottom: 48px;
   pointer-events: auto;
+}
+
+.search-pop {
+  background: #e3f2fd;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.07);
+  padding: 18px 14px 14px 14px;
+  margin-bottom: 22px;
+  border: 1px solid #bbdefb;
+  transition: box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-pop:focus-within {
+  box-shadow: 0 4px 16px rgba(33, 150, 243, 0.13);
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#controls h3 {
+  margin-top: 0;
+}
+
+#addressInput {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: 1px solid #90caf9;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+#controls button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+#controls button:hover {
+  background: #1565c0;
 }
 
 @media (max-width: 900px) {
